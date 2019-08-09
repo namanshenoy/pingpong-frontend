@@ -1,0 +1,121 @@
+.main-body{
+  background-color: #233540;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.main-table{
+  background-color: #ddd;
+  font-size: 1.25rem;
+  border-collapse: collapse;
+  text-align: center;
+  border: 2px solid #aaa;
+  /* box-shadow: 2px 2px 4px white; */
+}
+.main-table td, .main-table th{
+  padding: 10px;
+}
+.main-table td:not(:last-child), .main-table th:not(:last-child){
+  border-right: 1px solid #aaa;
+}
+.main-table tr{
+  border-bottom: 1px solid #aaa;
+}
+.buttons-container{
+  margin: 20px;
+}
+.login-container, .register-container{
+  color: white;
+}
+
+.selectedPlayer{
+  background-color: rgba(255,0,0,0.2)
+}
+
+.buttons-container{
+  display: flex;
+}
+button{
+  background-color: tomato;
+  padding: 10px 35px;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  color: white;
+  margin: 10px 30px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+button:hover{
+  opacity: 0.75;
+  transition: opacity linear 0.5s;
+}
+.screen-container{
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  min-height: 100vh;
+  width: 100%;
+}
+.screen-view{
+  color: white;
+  /* width: 50vw; */
+  /* margin-left: 0; */
+  
+}
+.player{
+  font-size: 1.25rem;
+  /* display: flex;
+  justify-content: left; */
+  min-height: 100px;
+  border-bottom: 1px solid white;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.rank{
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tri-grid{
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
+.name-icons{
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.meta-info{
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+  justify-items: center;
+
+}
+.extra-info{
+  height: 100%;
+  border-left: 1px solid white;
+  color: white;
+}
+.meta-email{
+  justify-self: flex-start;
+}
+.games-played{
+  border-bottom: 1px solid white;
+  min-height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+}
+.extra-large{
+  font-size: 7rem;
+}
+.extra-medium{
+  font-size: 5rem;
+}
