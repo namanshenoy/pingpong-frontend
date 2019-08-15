@@ -5,31 +5,53 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  padding-bottom: 500px;
+
 }
 .main-table{
   background-color: #ddd;
   font-size: 1.25rem;
   border-collapse: collapse;
   text-align: center;
-  border: 2px solid #aaa;
   /* box-shadow: 2px 2px 4px white; */
+  margin: auto;
+  width: 80%;
+    font-family: Verdana, Geneva, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothingF: grayscale;
 }
 .main-table td, .main-table th{
   padding: 10px;
+
 }
 .main-table td:not(:last-child), .main-table th:not(:last-child){
   border-right: 1px solid #aaa;
 }
-.main-table tr{
+.main-table tr:not(:last-child){
   border-bottom: 1px solid #aaa;
 }
 .buttons-container{
-  margin: 20px;
+  margin: auto;
 }
 .login-container, .register-container{
   color: white;
+  margin: auto;
+  font-size: 20px;
 }
 
+.main-table tr{
+  border-radius: 15px;
+}
+
+.main-table{
+  border-radius: 15px;
+}
+.main-table th:first-child {
+  border-top-left-radius: 15px;
+}
+.main-table th:last-child {
+  border-top-right-radius: 15px;
+}
 .selectedPlayer{
   background-color: rgba(255,0,0,0.2)
 }
@@ -37,6 +59,7 @@
 .buttons-container{
   display: flex;
 }
+
 button{
   background-color: tomato;
   padding: 10px 35px;
@@ -119,3 +142,80 @@ button:hover{
 .extra-medium{
   font-size: 5rem;
 }
+
+.top-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.banner-logo {
+  width: 300px;
+  margin-bottom: -15px;
+  display: block;
+}
+
+.banner-title {
+    text-align: center;
+    font: italic bold 12px/30px Georgia, serif;
+    font-family: Arial;
+    margin-bottom: 0px;
+    font-size: 20px;
+    color: white;
+}
+
+.table-header {
+    background: linear-gradient(to bottom, #FF0909 0%, #F40D5A 100%);
+    width: 100%;
+}
+
+.error-container{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input{
+  width: 100%;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input:hover {
+  background-color: grey;
+}
+
+.main-table thead{
+  display: block;
+}
+
+.main-table tbody{
+   max-height: 100px;
+   overflow-y: auto;
+   overflow-x: hidden;
+   width: 100%;
+}
+.main-table tr{
+  width: 100%;
+}
+

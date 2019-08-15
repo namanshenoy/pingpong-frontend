@@ -11,6 +11,20 @@
   },
 
   "libs": {
+    "socket": {
+      "cdn": "3rdparty",
+      "cwd": "node_modules/socket.io-client/dist",
+      "debug": {
+        "src": "socket.io.dev.js",
+        "path": "libs/socket.io-client/socket.io.dev.js",
+        "cdnPath": "socket.io-client/socket.io.dev"
+      },
+      "release": {
+        "src": "socket.io.js",
+        "path": "libs/socket.io-client/socket.io.js",
+        "cdnPath": "socket.io-client/socket.io"
+      }
+    },
 
     "knockout": {
       "cdn": "3rdparty",

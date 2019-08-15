@@ -1,5 +1,7 @@
 <div class="main-body">
-  <div class="screen-container">
+  <!-- <div class="screen-container"> -->
+
+    <!--
     <div class="screen-view" data-bind="foreach: players">
       <div class="player">
           <div>
@@ -26,10 +28,11 @@
             </div>
 
           </div>
-
-
       </div>
     </div>
+  -->
+
+  <!--
     <div class="extra-info">
         <div class="games-played">
           <span class="extra-large">4</span>
@@ -44,6 +47,9 @@
             <span class="extra-medium">Oracle Consulting</span>
           </div>
     </div>
+  -->
+
+    <!--
     <div class="extra-info">
         <div class="games-played">
           <span class="extra-large">9</span>
@@ -59,9 +65,15 @@
           </div>
     </div>
   </div>
+-->
+  <div style="min-height: 100vh">
+  <div class="top-banner">
+    <img class="banner-logo" src="img/d.png">
+    <h1 class="banner-title">Ping Pong Leaderboard</h1>
+  </div>
 
   <table class="main-table">
-    <tr>
+    <tr class="table-header">
       <th>Rank</th>
       <th>Name</th>
       <th>Email</th>
@@ -82,8 +94,7 @@
           <span data-bind="text: winStreak >= 2 ? '🌶️' : '' "></span>
           <span data-bind="text: winStreak >= 3 ? '🔥' : '' "></span>
           <span data-bind="text: winStreak >= 5 ? '🌋' : '' "></span>
-          <span data-bind="text: winStreak >= 10 ? '⭐' : '' "></span>
-          
+          <span data-bind="text: winStreak >= 10 ? '⭐' : '' "></span>          
         </td>
         <td data-bind="text: email"></td>
         <td data-bind="text: wins"></td>
@@ -92,17 +103,21 @@
       </tr>
     </tbody>
   </table>
+  </div>
   <div class="buttons-container">
-    <button class="" data-bind="click: challenge, style: { display: isLoggedIn() ? 'block' : 'none' }">Challenge</button>
+    <button class="" data-bind="click: challenge, style: { display: isLoggedIn() && !showConfirmWin() ? 'block' : 'none' }">Challenge</button>
+    <button class="" data-bind="click: confirmWin, style: { display: isLoggedIn() && showConfirmWin() ? 'block' : 'none' }"> Click Here If You Won </button>
     <button class="" data-bind="click: logout, style: { display: isLoggedIn() ? 'block' : 'none' }">Logout</button>
     <button class="" data-bind="click: deleteAccount, style: { display: isLoggedIn() ? 'block' : 'none' }">Delete Account</button>
     <button class="" data-bind="click: changeShowLogin, style: { display: !isLoggedIn() ? 'block' : 'none' }">Login</button>
     <button class="" data-bind="click: changeShowRegister, style: { display: !isLoggedIn() ? 'block' : 'none' }">Register</button>
   </div>
+
+   <div class="error-container">
+     <span class="rank" data-bind="text: errorMessage"></span>
+  </div>
   
   <div class="login-container" data-bind="style:{display: showLogin() && !isLoggedIn() ? 'block' : 'none'}">
-      
-      
     Email Address<br>
     <input type="email" data-bind="value:loginEmail"><br>
     Password<br>
@@ -110,7 +125,6 @@
     <button data-bind="click: login">Submit</button>
   </div>
   <div class="register-container" data-bind="style: { display: showRegister() && !isLoggedIn() ? 'block' : 'none'}">
-      
       Display Name<br>
       <input type="email" data-bind="value: registerDisplayName"><br>
       Email Address<br>
@@ -118,5 +132,9 @@
       Password<br>
       <input type="password" data-bind="value: registerPassword"><br>
       <button data-bind="click: register">Submit</button>
-    </div>
+  </div>
+
+ 
+
+
 </div>
