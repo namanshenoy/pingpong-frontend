@@ -11,8 +11,8 @@ function(oj, ko, $, socketIOClient) {
   function ChooseProgramViewModel() {
 
     var self = this;
-    let urlPrefix = "http://localhost:4000/"
-    //let urlPrefix = "http://132.145.137.160:443/socket/";
+    // let urlPrefix = "http://localhost:4000/"
+    let urlPrefix = "http://132.145.137.160:443/socket/";
     let socket;
     if(urlPrefix === "http://132.145.137.160:443/socket/") {
         socket = socketIOClient('http://132.145.137.160:443/');
@@ -223,12 +223,13 @@ function(oj, ko, $, socketIOClient) {
         success: (response) => {
           console.log(response);
           if( response.success !== null){
-            console.log("succesful register");
+            console.log("successful register");
             localStorage.setItem('isLoggedIn',true);
             localStorage.setItem('currentPlayerEmail',self.registerEmail());
             self.currentPlayerEmail(self.registerEmail());
             self.isLoggedIn(true);
             self.players(self.getPlayers(self.players()));
+            self.token(response.token);
            }
         },
         error : function(xhr, ajaxOptions, thrownError){
