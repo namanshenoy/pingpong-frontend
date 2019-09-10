@@ -1,11 +1,12 @@
 FROM node
-LABEL MAINTAINER maxbart@umich.edu
+LABEL MAINTAINERS="naman.shenoy@oracle.com, maxbart@umich.edu"
 
 COPY . .
 
 RUN npm install @oracle/oraclejet-tooling 
 RUN npm install -g @oracle/ojet-cli
 RUN npm install express
+RUN npm install
 
 RUN ojet build
 
