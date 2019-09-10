@@ -1,21 +1,6 @@
-/**
- * @license
- * Copyright (c) 2014, 2019, Oracle and/or its affiliates.
- * The Universal Permissive License (UPL), Version 1.0
- */
 'use strict';
-
-/**
- * Example of Require.js boostrap javascript
- */
-
- 
-requirejs.config(
-  {
+requirejs.config({
     baseUrl: 'js',
-
-    // Path mappings for the logical module names
-    // Update the main-release-paths.json for release mode when updating the mappings
     paths:
     //injector:mainReleasePaths
     {
@@ -39,8 +24,6 @@ requirejs.config(
     //endinjector
   }
   );
-  
-
 
 require(['ojs/ojbootstrap', 'appController', 'knockout', 'ojs/ojknockout'],
   function (Bootstrap, app, ko) {
@@ -49,7 +32,7 @@ require(['ojs/ojbootstrap', 'appController', 'knockout', 'ojs/ojknockout'],
         function init() {
           oj.Router.sync().then(
             function(){
-              console.log(app);
+              console.log('change');
               app.loadModule();
               ko.applyBindings(app,document.getElementById('globalBody'));
             },
@@ -58,9 +41,6 @@ require(['ojs/ojbootstrap', 'appController', 'knockout', 'ojs/ojknockout'],
             }
           );
         }
-
-        // If running in a hybrid (e.g. Cordova) environment, we need to wait for the deviceready
-        // event before executing any code that might interact with Cordova APIs or plugins.
         if (document.body.classList.contains('oj-hybrid')) {
           document.addEventListener('deviceready', init);
         } else {

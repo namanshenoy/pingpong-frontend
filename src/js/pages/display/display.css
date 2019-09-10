@@ -1,0 +1,16 @@
+.no-bar::-webkit-scrollbar{
+  
+  background-color: none;
+  
+}
+.no-bar::-webkit-scrollbar-thumb {
+  background: transparent; 
+}
+
+.website-domain{
+  background-color: #314a59;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+}

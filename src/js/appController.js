@@ -15,8 +15,9 @@ define([
         self.router = oj.Router.rootInstance;
 
         var config = {
-          'main':    {label: 'Oracle Ping Pong', isDefault: true},
-          'admin':   {label: 'Admin Panel'},
+          'home':    {label: 'Home page', isDefault: true, layout: 'default'},
+          'admin':   {label: 'Admin', layout: 'default'},
+          'display':   {label: 'Display', layout: 'default'},
         };
 
         self.router.configure(config);
@@ -28,8 +29,9 @@ define([
         self.loadModule = function() {
           ko.computed(function() {
             var name = self.router.moduleConfig.name();
-            var viewPath = 'pages/'+name+'/'+name+'.html';
-            var modelPath = 'pages/'+name+'/'+name;
+            var layout = config[name].layout;
+            var viewPath = 'layouts/'+layout+'/'+layout+'.html';
+            var modelPath = 'layouts/'+layout+'/'+layout;
             var masterPromise = Promise.all([
               moduleUtils.createView({'viewPath':viewPath}),
               moduleUtils.createViewModel({'viewModelPath':modelPath})

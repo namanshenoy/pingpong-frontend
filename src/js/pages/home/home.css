@@ -6,23 +6,7 @@
   align-items: flex-start;
   flex-direction: column;
 }
-.main-table{
-  background-color: #ddd;
-  font-size: 1.25rem;
-  border-collapse: collapse;
-  text-align: center;
-  border: 2px solid #aaa;
-  /* box-shadow: 2px 2px 4px white; */
-}
-.main-table td, .main-table th{
-  padding: 10px;
-}
-.main-table td:not(:last-child), .main-table th:not(:last-child){
-  border-right: 1px solid #aaa;
-}
-.main-table tr{
-  border-bottom: 1px solid #aaa;
-}
+
 .buttons-container{
   margin: 20px;
 }
@@ -37,20 +21,7 @@
 .buttons-container{
   display: flex;
 }
-button{
-  background-color: tomato;
-  padding: 10px 35px;
-  font-size: 1.25rem;
-  border-radius: 5px;
-  color: white;
-  margin: 10px 30px;
-  border: 1px solid white;
-  cursor: pointer;
-}
-button:hover{
-  opacity: 0.75;
-  transition: opacity linear 0.5s;
-}
+
 .screen-container{
   display: grid;
   grid-template-columns: 30% 50% 20%;
@@ -118,4 +89,24 @@ button:hover{
 }
 .extra-medium{
   font-size: 5rem;
+}
+
+.rules{
+  font-size: 1.2rem;
+}
+.rules li{
+  margin-bottom: 10px;
+}
+
+.winHeader{
+  margin-bottom: 15px !important;
+}
+
+.delete-buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.opponent{
+  cursor: pointer;
 }

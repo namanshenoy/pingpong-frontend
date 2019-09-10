@@ -4,10 +4,10 @@
 
   "cdns": {
     "jet": {
-      "prefix": "https://static.oracle.com/cdn/jet/v7.1.0-true/default/js",
+      "prefix": "https://static.oracle.com/cdn/jet/v7.1.0/default/js",
       "config": "bundles-config.js"
     },
-    "3rdparty": "https://static.oracle.com/cdn/jet/v7.1.0-true/3rdparty"
+    "3rdparty": "https://static.oracle.com/cdn/jet/v7.1.0/3rdparty"
   },
 
   "libs": {
@@ -268,6 +268,22 @@
         "src": ["css.min.js", "css-builder.js", "normalize.js"],
         "path": "libs/require-css/css.min.js",
         "cdnPath": "require-css/css.min"
+      }
+    },
+
+    
+    "socket": {
+      "cdn": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io",
+      "cwd": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io",
+      "debug": {
+        "src":  ["css.js", "css-builder.js", "normalize.js"],
+        "path": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io",
+        "cdnPath": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io"
+      },
+      "release": {
+        "src": ["css.min.js", "css-builder.js", "normalize.js"],
+        "path": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io",
+        "cdnPath": "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io"
       }
     }
   }
