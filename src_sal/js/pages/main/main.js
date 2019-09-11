@@ -12,12 +12,12 @@ function(oj, ko, $, socketIOClient) {
 
     var self = this;
     // let urlPrefix = "http://localhost:4000/"
-    let urlPrefix = "http://132.145.137.160:443/socket/";
+    let urlPrefix = "http://ocs-ar-experience.com/";
     let socket;
     if(urlPrefix === "http://132.145.137.160:443/socket/") {
         socket = socketIOClient('http://132.145.137.160:443/');
     } else {
-        socket = socketIOClient('http://localhost:4000');
+        socket = socketIOClient(urlPrefix);
     }
 
     self.viewPlayers = ko.observableArray([]);

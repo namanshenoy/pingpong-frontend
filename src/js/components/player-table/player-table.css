@@ -1,0 +1,58 @@
+.player-list{
+  padding: 10px;
+}
+
+/* move to sass */
+.player-row{
+  color: white;
+  margin: 10px 10px;
+  
+  padding: 5px 10px;
+  background-color: #233540;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 3fr;
+  align-items: center;
+}
+
+.player-row:hover{
+
+  background-color: #314a59;
+  transition: background-color 0.1s linear;
+}
+.selected-row{
+  background-color: #053959;
+
+}
+
+.player-rank{
+  /* background: linear-gradient( -225deg,#801f82,#431f82); */
+  background: linear-gradient( -225deg,#136a8a,#267871);
+  /* background-color: #234040; */
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.player-name{
+  font-size: 1.5rem;
+  max-width: 400px;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.progress-bar{
+  background: linear-gradient(45deg,#ff9736,#ff5136);
+  border-radius: 5px;
+  height: 15px;
+}
+.current-player-row{
+  background-color: #314a59;
+  background-color: #024b78;
+}

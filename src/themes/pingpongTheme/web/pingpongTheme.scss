@@ -1,0 +1,153 @@
+
+// Note that the order in the aggregating file is important
+//
+// 1. custom variables file: Due to the way sass default works, 
+//    the custom variable file must be imported before the platform theme 
+//    aggregating file (where the platform variable file will be imported).
+// 2. platform theme aggregating file
+
+//import custom variable overrides
+@import "pingpongTheme.web.settings";
+
+// import alta aggregating file
+@import "../../../../node_modules/@oracle/oraclejet/dist/scss/alta/oj-alta";
+
+.main-table{
+  font-size: 1.25rem;
+  border-collapse: collapse;
+  text-align: center;
+}
+.main-table td, .main-table th{
+  padding: 10px;
+}
+.main-table tr{
+  border-radius: 5px;
+  background-color: #ddd;
+  margin: 10px 0px;
+}
+
+.container{
+  background-color: #233540;
+  border-radius: 5px;
+}
+
+button{
+  background: linear-gradient(45deg,#ff9736,#ff5136);
+  padding: 10px 35px;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  color: white;
+  margin: 0px 15px;
+  cursor: pointer;
+  border: none;
+}
+button:hover{
+  opacity: 0.75;
+  transition: opacity linear 0.5s;
+}
+button:disabled{
+  opacity: 0.5;
+}
+
+label{
+  color: white;
+  font-size: 1.5rem;
+}
+input{
+  margin-top: 5px;
+  width: 50%;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  color: white;
+  background-color: #314a59;
+  border-radius: 5px;
+}
+
+.two-panels{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+.form-container{
+  margin: 10px;
+  padding: 20px;
+}
+.form-container h1{
+  margin: 0;
+}
+
+.bottomHeader{
+  color: white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+
+
+body{
+  background-color: #19262e;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin: 10px;
+}
+
+.white{
+  color: white;
+}
+.medium{
+  font-size: 1.15rem;
+}
+.fake-link{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.right-panel{
+  max-height: 100vh;
+  // height: 100vh;
+  overflow-y: auto;
+  // margin: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.left-panel{
+  max-height: 100vh;
+  // height: 100vh;
+  overflow-y: auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.pong-bar::-webkit-scrollbar{
+  background-color: #19262e;
+  background-color: #233540;
+  width: 12px;
+}
+.pong-bar::-webkit-scrollbar-thumb {
+  background: #314a59; 
+}
+.p-icon{
+  display: inline-block;
+  width: 30px;
+}
+.icon-meanings{
+  font-size: 1.15rem;
+}
+
+.icon-meaning-item{
+  margin-bottom: 5px;
+  display: inline-block;
+}
+.error-msg{
+  color: white;
+  margin: 10px 0px;
+  font-size: 1.25rem;
+  display: block;
+}

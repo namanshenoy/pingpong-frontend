@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "description": "",
+  "version": "",
+  "jetVersion": "",
+  "properties": {
+    "cardName": {
+      "description": "",
+      "type": "string"
+    },
+    "getReference": {
+      "description": ""
+    }
+  }
+}

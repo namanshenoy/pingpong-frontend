@@ -1,0 +1,36 @@
+
+<oj-bind-if test="[[ contentReady() ]]">
+  <div class="player-list">
+    <oj-bind-for-each data="[[ playersDataProvider ]]">
+      <template>
+        <div class="player-row" on-click="[[ selectPlayer.bind(null,$current) ]]" :class="[[ { 'selected-row' : selectedIndex() === $current.index, 'current-player-row' : currentPlayerEmail() === $current.data.email} ]]">
+          <div class="player-rank" on-click="[[ adminEnter.bind(null,$current.data.rank) ]]">
+            <oj-bind-text value="[[ $current.data.rank ]]"></oj-bind-text>
+          </div>
+          <div class="player-name">
+            <oj-bind-text value="[[ $current.data.name ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.rank === 1 ? '🥇' : '' ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.rank === 2 ? '🥈' : '' ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.rank === 3 ? '🥉' : '' ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.inMatch ? '❗' : '' ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.winStreak >= 2 ? '🌶️' : '' ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.winStreak >= 3 ? '🔥' : '' ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.winStreak >= 5 ? '🌋' : '' ]]"></oj-bind-text>
+            <oj-bind-text value="[[ $current.data.winStreak >= 10 ? '⭐' : '' ]]"></oj-bind-text>
+          </div>
+          <div>
+            W:
+            <oj-bind-text value="[[ $current.data.wins ]]"></oj-bind-text>
+          </div>
+          <div>
+            L:
+            <oj-bind-text value="[[ $current.data.losses ]]"></oj-bind-text>
+          </div>
+          <div>
+            <div class="progress-bar" :style.width="[[ getWidth($current) + '%' ]]"></div>
+          </div>
+          </div>
+      </template>
+    </oj-bind-for-each>
+  </div> 
+</oj-bind-if>

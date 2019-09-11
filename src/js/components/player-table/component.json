@@ -1,0 +1,20 @@
+{
+  "name": "",
+  "description": "",
+  "version": "",
+  "jetVersion": "",
+  "properties": {
+    "selectedIndex": {
+      "description": "",
+      "type": "function"
+    },
+    "players": {
+      "description": "",
+      "type": "function"
+    },
+    "currentPlayerEmail": {
+      "description": "",
+      "type": "function"
+    }
+  }
+}

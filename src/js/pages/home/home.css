@@ -1,0 +1,112 @@
+.main-body{
+  background-color: #233540;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.buttons-container{
+  margin: 20px;
+}
+.login-container, .register-container{
+  color: white;
+}
+
+.selectedPlayer{
+  background-color: rgba(255,0,0,0.2)
+}
+
+.buttons-container{
+  display: flex;
+}
+
+.screen-container{
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  min-height: 100vh;
+  width: 100%;
+}
+.screen-view{
+  color: white;
+  /* width: 50vw; */
+  /* margin-left: 0; */
+  
+}
+.player{
+  font-size: 1.25rem;
+  /* display: flex;
+  justify-content: left; */
+  min-height: 100px;
+  border-bottom: 1px solid white;
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.rank{
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.tri-grid{
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
+.name-icons{
+  font-size: 1.75rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.meta-info{
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 40% 20% 20% 20%;
+  justify-items: center;
+
+}
+.extra-info{
+  height: 100%;
+  border-left: 1px solid white;
+  color: white;
+}
+.meta-email{
+  justify-self: flex-start;
+}
+.games-played{
+  border-bottom: 1px solid white;
+  min-height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  flex-direction: column;
+}
+.extra-large{
+  font-size: 7rem;
+}
+.extra-medium{
+  font-size: 5rem;
+}
+
+.rules{
+  font-size: 1.2rem;
+}
+.rules li{
+  margin-bottom: 10px;
+}
+
+.winHeader{
+  margin-bottom: 15px !important;
+}
+
+.delete-buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.opponent{
+  cursor: pointer;
+}
